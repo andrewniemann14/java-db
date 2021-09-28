@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!-- CONNECTION WINDOW -->
+
+<VBox fx:id="connectWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="400.0">
+         <children>
+            <Label prefHeight="42.0" prefWidth="203.0" text="Enter database information...">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" maxWidth="400.0" prefHeight="30.0" prefWidth="400.0">
+               <children>
+                  <Label text="Local DB Name:" />
+                  <TextField fx:id="tfURL" prefWidth="250.0" text="databasedb" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" maxWidth="400.0" prefHeight="30.0" prefWidth="400.0">
+               <children>
+                  <Label text="Username:" />
+                  <TextField fx:id="tfUser" prefWidth="250.0" text="student1" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" maxWidth="400.0" prefHeight="30.0" prefWidth="400.0">
+               <children>
+                  <Label text="Password:" />
+                  <TextField fx:id="tfPassword" prefWidth="250.0" text="pass" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" maxWidth="400.0" prefHeight="25.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnConnect" mnemonicParsing="false" onAction="#initializeDB" text="Connect">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnContinue" mnemonicParsing="false" onAction="#changeViewToMain" text="Return" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label fx:id="lblConnectResult" />
+   </children>
+</VBox>
